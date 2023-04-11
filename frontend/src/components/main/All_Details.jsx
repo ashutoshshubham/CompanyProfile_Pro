@@ -125,7 +125,14 @@ const All_Details = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     {feed.map((fb) => (
-                        <p>{fb.feedback}</p>
+                        <>
+                            <p>{fb.feedback}</p>
+                            <Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='error' onClick={() => (deleteFeedback(fb._id))}>Delete Feedback</Button>
+                        </>
+
+
+
+
                     ))}
                 </AccordionDetails>
             </Accordion>
