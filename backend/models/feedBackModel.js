@@ -3,7 +3,7 @@ const {Schema, model} = require("../connection")
 
 const mySchema = new Schema({
     feedback : String,
-    // user : {type : Types.ObjectId, ref: 'users'}
+    user : {type : Types.ObjectId, ref: 'users'}
 })
 
 

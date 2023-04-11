@@ -13,37 +13,39 @@ const Signup = () => {
 
 
 
-  const addOrg = async () => {
-    // console.log(formdata)
-    // resetForm()
+  // const addOrg = async () => {
+  //   // console.log(formdata)
+  //   // resetForm()
 
-    const res = await fetch('http://localhost:5000/organisation/add', {
-      method: 'POST',
-      body: JSON.stringify({}),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+  //   const res = await fetch('http://localhost:5000/organisation/add', {
+  //     method: 'POST',
+  //     body: JSON.stringify({}),
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
 
-    console.log(res.status);
+  //   console.log(res.status);
 
-    if (res.status === 200) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Signed Successfully'
-      })
-      const data = await res.json();
-      return data._id;
-      // navigate('/user');
-    }
+  //   if (res.status === 200) {
+  //     Swal.fire({
+  //       icon: 'success',
+  //       title: 'Success',
+  //       text: 'Signed Successfully'
+  //     })
+  //     const data = await res.json();
+  //     return data._id;
+  //     // navigate('/user');
+  //   }
 
-  }
+  // }
+
+
   const userSubmit = async (formdata, {resetForm}) => {
 
     
-    let OrgId = await addOrg();
-    formdata.organisation = OrgId;
+    // let OrgId = await addOrg();
+    // formdata.organisation = OrgId;
 
     console.log(formdata)
     resetForm()
@@ -86,7 +88,7 @@ const Signup = () => {
               <h1 className="card-title text-center">CREATE ACCOUNT</h1>
 
               <Formik
-                initialValues={{ name: "",  email: "", password: "",organisation: ""}}
+                initialValues={{ name: "",  email: "", password: ""}}
                 onSubmit={userSubmit}
               >
                 {

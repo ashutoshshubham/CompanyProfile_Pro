@@ -28,7 +28,7 @@ const SignIn = () => {
             })
             const data = (await res.json());
             console.log(data);
-            // sessionStorage.setItem('user', JSON.stringify(data));
+            sessionStorage.setItem('user', JSON.stringify(data));
 
             navigate('/pro_entry');
         }
