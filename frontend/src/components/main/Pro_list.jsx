@@ -76,10 +76,10 @@ const Pro_list = () => {
 
   return (
     <div className='container'>
-      <h1 className='text-center mt-3'>ALL PROFILES HERE</h1>
+      {/* <h1 className='text-center mt-3'>ALL PROFILES HERE</h1> */}
       {profile.map((profiles) => (
 
-        <div className="card">
+        <div className="card mt-5">
           <div className="card-body">
             <h5 className="card-title"><b>Company Name - </b>{profiles.name}</h5>
             <div>
@@ -114,9 +114,9 @@ const Pro_list = () => {
             </div>
 
 
-            <button type="button" className="btn btn-danger" onClick={() => (deleteProfile(profiles._id))}>
+            {/* <button type="button" className="btn btn-danger" onClick={() => (deleteProfile(profiles._id))}>
               Delete Profile
-            </button>
+            </button> */}
           </div>
         </div>
         // <Accordion sx={{marginTop:'20px', marginBottom:'20px'}}>

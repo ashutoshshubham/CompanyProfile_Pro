@@ -50,6 +50,11 @@ const Navbar = () => {
                                         Feedback
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/all_details">
+                                        All Details
+                                    </Link>
+                                </li>
                             </ul>
                             {/* Left links */}
                             {/* <div className="d-flex align-items-center"> */}

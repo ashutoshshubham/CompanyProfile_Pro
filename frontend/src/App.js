@@ -8,6 +8,7 @@ import ForgetPswd from './components/main/ForgetPswd';
 import Feedback from './components/main/Feedback';
 import Pro_entry from './components/main/Pro_entry';
 import Pro_list from './components/main/Pro_list';
+import All_Details from './components/main/All_Details';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route element={<Feedback />} path='feedback' />
       <Route element={<Pro_entry />} path='pro_entry' />
       <Route element={<Pro_list />} path='pro_list' />
+      <Route element={<All_Details />} path='all_details' />
     </Routes>
     </BrowserRouter>
   );
