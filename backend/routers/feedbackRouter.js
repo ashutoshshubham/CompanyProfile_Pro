@@ -19,7 +19,8 @@ router.post('/add', (req, res) => {
 });
 
 router.get('/getall', (req,res) => {
-    Model.find({}).populate('user')
+    // Model.find({}).populate('user')
+    Model.find({})
     .then((result) => {
         res.json(result);
     }).catch((err) => {

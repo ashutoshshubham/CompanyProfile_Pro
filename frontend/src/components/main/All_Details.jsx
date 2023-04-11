@@ -125,7 +125,7 @@ const All_Details = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                     {feed.map((fb) => (
-                        <h3>{fb.feedback}</h3>
+                        <p>{fb.feedback}</p>
                     ))}
                 </AccordionDetails>
             </Accordion>
