@@ -26,6 +26,7 @@ const Pro_list = () => {
   }
 
   const filterCompanies = async (category, value) => {
+    
     const res = await fetch('http://localhost:5000/company/getall');
     console.log(res.status)
 
