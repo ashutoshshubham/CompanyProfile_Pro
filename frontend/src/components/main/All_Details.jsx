@@ -127,6 +127,7 @@ const All_Details = () => {
                     {feed.map((fb) => (
                         <>
                             <p>{fb.feedback}</p>
+                            <p>{fb.user.name}</p>
                             <Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='error' onClick={() => (deleteFeedback(fb._id))}>Delete Feedback</Button>
                         </>
 

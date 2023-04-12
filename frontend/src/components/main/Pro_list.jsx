@@ -25,6 +25,18 @@ const Pro_list = () => {
     setProfile(data)
   }
 
+  const filterCompanies = async (category, value) => {
+    const res = await fetch('http://localhost:5000/company/getall');
+    console.log(res.status)
+
+    const data = await res.json();
+    console.log(data);
+    let filtered = data.filter(data => ( data[category].toLowerCase().includes(value.toLowerCase()) ))
+    console.log(filtered);
+    setProfile(filtered)
+
+  }
+
   //   const fetchImages = async () => {
   //     const res = await fetch('http://localhost:5000/image/getall');
   //     console.log(res.status)
@@ -76,6 +88,7 @@ const Pro_list = () => {
 
   return (
     <div className='container'>
+      <button onClick={() => {filterCompanies('type', 'sales')}}>Sales</button>
       {/* <h1 className='text-center mt-3'>ALL PROFILES HERE</h1> */}
       {profile.map((profiles) => (
 

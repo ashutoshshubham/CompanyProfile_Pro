@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Formik } from 'formik'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 const Feedback = () => {
