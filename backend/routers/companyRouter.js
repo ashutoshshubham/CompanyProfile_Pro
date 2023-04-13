@@ -62,7 +62,7 @@ router.get('/getbyid/:compId', (req, res) => {
         });
 })
 
-router.put('/update/:compId', (req, res) => {
+router.put('/update_pro/:compId', (req, res) => {
 
     Model.findByIdAndUpdate(req.params.compId, req.body)
         .then((result) => {

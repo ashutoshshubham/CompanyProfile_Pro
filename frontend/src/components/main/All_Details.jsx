@@ -111,6 +111,10 @@ const All_Details = () => {
                     </AccordionDetails>
 
                     <Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='error' onClick={() => (deleteProfile(profiles._id))}>Delete Profile</Button>
+
+                    {/* {profiles.user} */}
+
+                    <Link to={'/update_pro/' + profiles._id}><Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='success' >Update Profile</Button></Link>
                 </Accordion>
 
             ))}

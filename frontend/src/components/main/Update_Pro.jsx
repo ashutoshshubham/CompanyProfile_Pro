@@ -15,7 +15,7 @@ const Update_Pro = () => {
 
     const getProfileByid = async () => {
         setLoading(true);
-        const res = await fetch('http://localhost:5000/profile/getbyid/' + id);
+        const res = await fetch('http://localhost:5000/company/getbyid/' + id);
         console.log(res.status);
 
         if (res.status === 200) {
@@ -33,7 +33,7 @@ const Update_Pro = () => {
     const updated_profile_Submit = async (formdata) => {
         console.log(formdata)
 
-        const res = await fetch('http://localhost:5000/profile/update/' + id, {
+        const res = await fetch('http://localhost:5000/company/update_pro/' + id, {
             method: 'PUT',
             body: JSON.stringify(formdata),
             headers: { "Content-Type": "application/json" },
