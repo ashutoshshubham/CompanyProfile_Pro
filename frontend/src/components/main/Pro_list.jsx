@@ -55,44 +55,43 @@ const Pro_list = () => {
   //     fetchImages();
   //   }, [])
 
-  const deleteProfile = async (id) => {
-    console.log(id);
-    const res = await fetch('http://localhost:5000/company/delete/' + id, {
-      method: "DELETE",
-    })
-    console.log(res.status);
-    if (res.status === 200) {
-      fetchProfiles();
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Profile Deleted Successfully'
-      })
-    }
-  }
-
-  //   const deleteImage = async (id) => {
-  //     console.log(id);
-  //     const res = await fetch('http://localhost:5000/image/delete/' + id, {
-  //       method: 'DELETE',
+  // const deleteProfile = async (id) => {
+  //   console.log(id);
+  //   const res = await fetch('http://localhost:5000/company/delete/' + id, {
+  //     method: "DELETE",
+  //   })
+  //   console.log(res.status);
+  //   if (res.status === 200) {
+  //     fetchProfiles();
+  //     Swal.fire({
+  //       icon: 'success',
+  //       title: 'Success',
+  //       text: 'Profile Deleted Successfully'
   //     })
-  //     console.log(res.status);
-  //     if (res.status === 200) {
-  //       fetchImages();
-  //       Swal.fire({
-  //         icon: 'success',
-  //         title: 'Success',
-  //         text: 'Image Deleted Successfully'
-  //       })
-  //     }
   //   }
+  // }
+
 
   return (
     <div className='container'>
-      <button className='btn btn-secondary' onClick={() => { filterCompanies('type', 'sales') }}>
+
+      <button className='btn btn-secondary mx-2 mt-3' onClick={() => { filterCompanies('type', 'sales') }}>
         Sales
       </button>
-      <button className='btn btn-secondary' onClick={fetchProfiles}>
+
+      <button className='btn btn-secondary mx-2 mt-3' onClick={() => { filterCompanies('type', 'product based') }}>
+        Product Based
+      </button>
+
+      <button className='btn btn-secondary mx-2 mt-3' onClick={() => { filterCompanies('type', 'service based') }}>
+        Service Based
+      </button>
+
+      <button className='btn btn-secondary mx-2 mt-3' onClick={() => { filterCompanies('type', 'manufacturing') }}>
+        Manufacturing
+      </button>
+
+      <button className='btn btn-secondary mx-2 mt-3' onClick={fetchProfiles}>
         View All
       </button>
       
@@ -100,7 +99,7 @@ const Pro_list = () => {
 
       {profile.map((profiles) => (
 
-        <div className="card mt-5">
+        <div className="card mt-3">
           <div className="card-body">
             <h5 className="card-title"><b>Company Name - </b>{profiles.name}</h5>
             <div>
