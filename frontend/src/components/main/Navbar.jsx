@@ -8,7 +8,7 @@ const Navbar = () => {
 
             <>
                 {/* Navbar */}
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
                     {/* Container wrapper */}
                     <div className="container">
                         {/* Navbar brand */}
