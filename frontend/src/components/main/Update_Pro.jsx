@@ -5,6 +5,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const Update_Pro = () => {
 
+
+
     const { id } = useParams();
     // console.log(id);
     const [ProfileData, setProfileData] = useState(null)

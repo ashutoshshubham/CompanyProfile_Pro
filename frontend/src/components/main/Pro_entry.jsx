@@ -8,9 +8,12 @@ import Swal from "sweetalert2"
 const Pro_entry = () => {
 
 
+    const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+    console.log(currentUser);
 
 
     const profile_submit = async (formdata, { resetForm }) => {
+        formdata.user = currentUser._id;
         console.log(formdata)
         // resetForm()
 
@@ -59,7 +62,7 @@ const Pro_entry = () => {
 
                     <div className="col-md-6 mx-auto">
 
-                        <Formik initialValues={{ name: "", type: "", departments: "", working: '', address: '', contact: '', email: '' }} onSubmit={profile_submit}>
+                        <Formik initialValues={{ name: "", type: "", departments: "", working: '', address: '', contact: '', email: '', user: "" }} onSubmit={profile_submit}>
                             {({ values, handleSubmit, handleChange }) =>
                             (
 

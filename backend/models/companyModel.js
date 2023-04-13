@@ -1,3 +1,4 @@
+const { Types } = require('mongoose')
 const { Schema, model } = require('../connection')
 const mySchema = new Schema({
     name: String,
@@ -7,6 +8,7 @@ const mySchema = new Schema({
     address: String,
     contact: Number,
     email: String,
+    user : {type : Types.ObjectId, ref: 'users'}
 
 })
 
