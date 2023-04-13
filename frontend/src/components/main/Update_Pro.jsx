@@ -57,7 +57,7 @@ const Update_Pro = () => {
             return (
                 <div className='card mt-5'>
                     <div className="card-body">
-                        <h1 className="text-center">Signup</h1>
+                        <h1 className="text-center mb-3">Update your profile here</h1>
 
                         <Formik
                             initialValues={ProfileData}
