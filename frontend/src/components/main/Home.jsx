@@ -34,20 +34,97 @@ const Home = () => {
 
       </div>
 
-      <div className="row">
-
-        <div className="card mt-2">
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+      <>
+  {/* Footer */}
+  <footer className="text-center text-lg-start bg-white text-muted">
+    {/* Section: Social media */}
+    <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      {/* Left */}
+      <div className="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      {/* Left */}
+      {/* Right */}
+      <div>
+        <a href="" className="me-4 link-secondary">
+          <i className="fab fa-facebook-f" />
+        </a>
+        <a href="" className="me-4 link-secondary">
+          <i className="fab fa-twitter" />
+        </a>
+        <a href="" className="me-4 link-secondary">
+          <i className="fab fa-google" />
+        </a>
+        <a href="" className="me-4 link-secondary">
+          <i className="fab fa-instagram" />
+        </a>
+        <a href="" className="me-4 link-secondary">
+          <i className="fab fa-linkedin" />
+        </a>
+        <a href="" className="me-4 link-secondary">
+          <i className="fab fa-github" />
+        </a>
+      </div>
+      {/* Right */}
+    </section>
+    {/* Section: Social media */}
+    {/* Section: Links  */}
+    <section className="">
+      <div className="container text-center text-md-start mt-5">
+        {/* Grid row */}
+        <div className="mt-3">
+          {/* Grid column */}
+          
+          {/* Grid column */}
+          {/* Grid column */}
+          
+          {/* Grid column */}
+          {/* Grid column */}
+         
+          {/* Grid column */}
+          {/* Grid column */}
+          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            {/* Links */}
+            <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+            <p>
+              <i className="fas fa-home me-3 text-secondary" /> New York, NY
+              10012, US
+            </p>
+            <p>
+              <i className="fas fa-envelope me-3 text-secondary" />
+              info@example.com
+            </p>
+            <p>
+              <i className="fas fa-phone me-3 text-secondary" /> + 01 234 567 88
+            </p>
+            <p>
+              <i className="fas fa-print me-3 text-secondary" /> + 01 234 567 89
             </p>
           </div>
+          {/* Grid column */}
         </div>
-
-
+        {/* Grid row */}
       </div>
+    </section>
+    {/* Section: Links  */}
+    {/* Copyright */}
+    <div
+      className="text-center p-4"
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.025)" }}
+    >
+      © 2021 Copyright:
+      <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
+        MDBootstrap.com
+      </a>
+    </div>
+    {/* Copyright */}
+  </footer>
+  {/* Footer */}
+</>
+
+
+
+
 
     </div>
   )
