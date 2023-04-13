@@ -52,9 +52,19 @@ router.delete('/delete/:compId', (req, res) => {
         });
 })
 
-router.put('/update/:profile_id', (req, res) => {
+router.get('/getbyid/:compId', (req, res) => {
+    Model.findById(req.params.compId)
+        .then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+})
 
-    Model.findByIdAndUpdate(req.params.userid, req.body)
+router.put('/update/:compId', (req, res) => {
+
+    Model.findByIdAndUpdate(req.params.compId, req.body)
         .then((result) => {
             res.json(result);
         }).catch((err) => {
@@ -64,15 +74,7 @@ router.put('/update/:profile_id', (req, res) => {
 
 })
 
-router.get('/getbyid/:profile_id', (req, res) => {
-    Model.findById(req.params.userid)
-        .then((result) => {
-            res.json(result);
-        }).catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-})
+
 
 
 
