@@ -10,9 +10,11 @@ const Home = () => {
 
       <p className='mt-3 text-center fs-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut magni pariatur eum laborum unde vel repellat aspernatur repudiandae magnam illum nesciunt neque tempore eius, consequuntur temporibus voluptate, nisi in vitae, quisquam voluptates explicabo nemo dolor! Dolores aspernatur veniam cupiditate explicabo velit minima, incidunt ipsum ratione. Veniam voluptatum dolorum minus voluptates, impedit molestias tempore autem quis officia nulla quae sed ea! Doloremque atque nesciunt a beatae iure, temporibus quisquam ducimus repellendus possimus quod tempora. Ullam repellat assumenda totam? Dolorem, eligendi dicta.</p>
 
+      butto
+
       <div className="row">
 
-        <div className="col-md-6 card mt-2">
+        <div className="col-md-5 card mt-2 mx-auto">
           <div className="card-body">
             <h3 className="card-title border border-danger border-3 rounded-pill d-inline px-3">About Us</h3>
             <p className="card-text my-2">
@@ -22,7 +24,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="col-md-6 card mt-2">
+        <div className="col-md-5 card mt-2 mx-auto">
           <div className="card-body">
             <h3 className="card-title border border-danger border-3 rounded-pill d-inline px-3">Why Choose Us</h3>
             <p className="card-text my-2">
@@ -109,13 +111,13 @@ const Home = () => {
     {/* Section: Links  */}
     {/* Copyright */}
     <div
-      className="text-center p-4"
+      className="text-center p-4 bg-dark text-light"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.025)" }}
     >
-      © 2021 Copyright:
-      <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-        MDBootstrap.com
-      </a>
+      © 2023 Copyright:
+      <span className="text-reset fw-bold" >
+        Company Profile
+      </span>
     </div>
     {/* Copyright */}
   </footer>
