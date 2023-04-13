@@ -55,6 +55,11 @@ const Navbar = () => {
                                         All Details
                                     </Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/update_pro">
+                                       Update Profile
+                                    </Link>
+                                </li>
                             </ul>
                             {/* Left links */}
                             {/* <div className="d-flex align-items-center"> */}

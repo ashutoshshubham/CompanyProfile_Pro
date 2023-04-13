@@ -9,6 +9,8 @@ const mySchema = new Schema({
     name : String,
     email : String,
     password : String,
+    createdAt : Date,
+    verified: {type: Boolean, default: false},
     // organisation : {type : Types.ObjectId, ref: 'organisation'},
     // feedback : {type : Types.ObjectId, ref: 'feedback'}
 })
