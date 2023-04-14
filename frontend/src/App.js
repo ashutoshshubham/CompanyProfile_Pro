@@ -10,6 +10,7 @@ import Pro_entry from './components/main/Pro_entry';
 import Pro_list from './components/main/Pro_list';
 import All_Details from './components/main/All_Details';
 import Update_Pro from './components/main/Update_Pro';
+import Profile_check from './components/main/Profile_check';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route element={<Pro_list />} path='pro_list' />
       <Route element={<All_Details />} path='all_details' />
       <Route element={<Update_Pro />} path='update_pro/:id' />
+      <Route element={<Profile_check />} path='profile_check' />
     </Routes>
     </BrowserRouter>
   );
