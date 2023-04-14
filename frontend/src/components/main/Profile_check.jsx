@@ -1,9 +1,11 @@
 import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react'
-import { Navigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Profile_check = () => {
+
+    const navigate = useNavigate();
 
     // const fetchProfiles = async () => {
     //     const res = await fetch('http://localhost:5000/company/getall');
@@ -18,23 +20,6 @@ const Profile_check = () => {
     // console.log(id);
     const [ProfileData, setProfileData] = useState(null)
     const [loading, setLoading] = useState(false)
-
-    const getProfileByid = async () => {
-        setLoading(true);
-        const res = await fetch('http://localhost:5000/company/getbyid/' + id);
-        console.log(res.status);
-
-        if (res.status === 200) {
-            const data = await res.json();
-            console.log(data);
-            setProfileData(data);
-            setLoading(false);
-        }
-    }
-
-    useEffect(() => {
-        getProfileByid();
-    }, []);
 
     const loginSubmit = async (formdata, { resetForm, setSubmitting }) => {
         console.log(formdata)
@@ -55,13 +40,32 @@ const Profile_check = () => {
                 title: 'Success',
                 text: 'Login Successful'
             })
-            const data = (await res.json());
+            const data = await (res.json());
             console.log(data);
             sessionStorage.setItem('user', JSON.stringify(data));
-            Navigate('/update_pro');
+            // navigate('/homepage');
         }
 
     }
+
+    const getProfileByid = async () => {
+        setLoading(true);
+        const res = await fetch('http://localhost:5000/company/getbyid/' + id);
+        console.log(res.status);
+
+        if (res.status === 200) {
+            const data = await res.json();
+            console.log(data);
+            setProfileData(data);
+            setLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        getProfileByid();
+    }, []);
+
+
 
     const displayForm = () => {
         if (!loading && ProfileData) {
@@ -91,7 +95,7 @@ const Profile_check = () => {
                                             <label className="form-label" htmlFor="form12">
                                                 Enter Password
                                             </label>
-                                            <input type="text" id="form12" className="form-control" />
+                                            <input type="password" id="password" className="form-control" />
                                         </div>
 
                                         <button type="submit" className="btn btn-primary">
@@ -101,24 +105,6 @@ const Profile_check = () => {
                                 )
 
                                 }
-
-                                {/* <div className="mb-3">
-                                    <label className="form-label" htmlFor="form12">
-                                        Email
-                                    </label>
-                                    <input type="text" id="form12" className="form-control" aria-label="disabled input example" />
-                                </div>
-
-                                <div className="mb-3">
-                                    <label className="form-label" htmlFor="form12">
-                                        Enter Password
-                                    </label>
-                                    <input type="text" id="form12" className="form-control" />
-                                </div>
-
-                                <button type="submit" className="btn btn-primary">
-                                    Submit
-                                </button> */}
 
                             </Formik>
                         </div>

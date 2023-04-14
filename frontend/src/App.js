@@ -27,7 +27,7 @@ function App() {
       <Route element={<Pro_list />} path='pro_list' />
       <Route element={<All_Details />} path='all_details' />
       <Route element={<Update_Pro />} path='update_pro/:id' />
-      <Route element={<Profile_check />} path='profile_check' />
+      <Route element={<Profile_check />} path='profile_check/:id' />
     </Routes>
     </BrowserRouter>
   );
