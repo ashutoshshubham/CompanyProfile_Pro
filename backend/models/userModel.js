@@ -7,7 +7,7 @@ const {Schema, model} = require('../connection');     //import connection.js fil
 
 const mySchema = new Schema({
     name : String,
-    email : String,
+    email : {type: String, unique: true},
     password : String,
     createdAt : Date,
     verified: {type: Boolean, default: false},

@@ -53,6 +53,7 @@ router.get('/getbyemail/:useremail', (req,res) => {
 
 
 router.post('/authenticate', (req, res) => {
+    console.log(req.body)
 
     Model.findOne(req.body)
     .then((result) => {

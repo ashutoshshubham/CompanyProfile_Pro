@@ -55,11 +55,11 @@ const Navbar = () => {
                                         All Details
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link className="nav-link" to="/profile_check">
                                        Profile Check
                                     </Link>
-                                </li>
+                                </li> */}
                             </ul>
                             {/* Left links */}
                             {/* <div className="d-flex align-items-center"> */}
