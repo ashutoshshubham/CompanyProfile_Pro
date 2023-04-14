@@ -1,5 +1,7 @@
+import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Profile_check = () => {
 
@@ -34,6 +36,102 @@ const Profile_check = () => {
         getProfileByid();
     }, []);
 
+    const loginSubmit = async (formdata, { resetForm, setSubmitting }) => {
+        console.log(formdata)
+        resetForm()
+        setSubmitting(true)
+
+        const res = await fetch('http://localhost:5000/user/authenticate', {
+            method: 'POST',
+            body: JSON.stringify(formdata),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        console.log(res.status)
+        if (res.status === 200) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Login Successful'
+            })
+            const data = (await res.json());
+            console.log(data);
+            sessionStorage.setItem('user', JSON.stringify(data));
+            Navigate('/update_pro');
+        }
+
+    }
+
+    const displayForm = () => {
+        if (!loading && ProfileData) {
+
+
+            return (
+                <div className='container'>
+
+                    <div className="card w-50 mx-auto mt-5">
+                        <div className="card-body">
+                            <h3 className="card-title text-center"><b>AUTHENTICATE</b></h3>
+
+                            <Formik
+                                initialValues={ProfileData}
+                                onSubmit={loginSubmit}>
+                                {({ values, handleChange, handleSubmit }) => (
+
+                                    <form onSubmit={handleSubmit}>
+                                        <div className="mb-3">
+                                            <label className="form-label" htmlFor="form12">
+                                                Email
+                                            </label>
+                                            <input type="text" id="form12" className="form-control" value={values.email} onChange={handleChange} />
+                                        </div>
+
+                                        <div className="mb-3">
+                                            <label className="form-label" htmlFor="form12">
+                                                Enter Password
+                                            </label>
+                                            <input type="text" id="form12" className="form-control" />
+                                        </div>
+
+                                        <button type="submit" className="btn btn-primary">
+                                            Submit
+                                        </button>
+                                    </form>
+                                )
+
+                                }
+
+                                {/* <div className="mb-3">
+                                    <label className="form-label" htmlFor="form12">
+                                        Email
+                                    </label>
+                                    <input type="text" id="form12" className="form-control" aria-label="disabled input example" />
+                                </div>
+
+                                <div className="mb-3">
+                                    <label className="form-label" htmlFor="form12">
+                                        Enter Password
+                                    </label>
+                                    <input type="text" id="form12" className="form-control" />
+                                </div>
+
+                                <button type="submit" className="btn btn-primary">
+                                    Submit
+                                </button> */}
+
+                            </Formik>
+                        </div>
+                    </div>
+
+
+                </div>
+            )
+
+        }
+    }
+
+
 
 
 
@@ -44,11 +142,19 @@ const Profile_check = () => {
 
 
     return (
+
         <div className='container'>
 
-            <div className="card w-50 mx-auto mt-5">
+            {/* <div className="card w-50 mx-auto mt-5">
                 <div className="card-body">
                     <h3 className="card-title text-center"><b>AUTHENTICATE</b></h3>
+
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor="form12">
+                            Email
+                        </label>
+                        <input type="text" id="form12" className="form-control" />
+                    </div>
 
                     <div className="mb-3">
                         <label className="form-label" htmlFor="form12">
@@ -59,15 +165,20 @@ const Profile_check = () => {
 
 
 
-                    <button type="button" className="btn btn-primary">
-                        Button
+                    <button type="submit" className="btn btn-primary">
+                        Submit
                     </button>
-                </div>
-            </div>
 
+                </div>
+
+            </div> */}
+
+            {displayForm()}
 
         </div>
+
     )
 }
+
 
 export default Profile_check
