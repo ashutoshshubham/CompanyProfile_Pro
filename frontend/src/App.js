@@ -11,24 +11,28 @@ import Pro_list from './components/main/Pro_list';
 import All_Details from './components/main/All_Details';
 import Update_Pro from './components/main/Update_Pro';
 import Profile_check from './components/main/Profile_check';
+import UserProvider from './context/UserProvider'
+import UserAuth from './auth/UserAuth'
 
 function App() {
   return (
     <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path='/' element={<Navigate to='/homepage' />}/>
-      <Route element={<Home />} path='homepage' />
-      <Route element={<SignIn />} path='signin' />
-      <Route element={<SignUp />} path='signup' />
-      <Route element={<ForgetPswd />} path='forgetpswd' />
-      <Route element={<Feedback />} path='feedback' />
-      <Route element={<Pro_entry />} path='pro_entry' />
-      <Route element={<Pro_list />} path='pro_list' />
-      <Route element={<All_Details />} path='all_details' />
-      <Route element={<Update_Pro />} path='update_pro/:id' />
-      <Route element={<Profile_check />} path='profile_check/:id' />
-    </Routes>
+      <Navbar />
+      <UserProvider>
+        <Routes>
+          <Route path='/' element={<Navigate to='/homepage' />} />
+          <Route element={<Home />} path='homepage' />
+          <Route element={<SignIn />} path='signin' />
+          <Route element={<SignUp />} path='signup' />
+          <Route element={<ForgetPswd />} path='forgetpswd' />
+          <Route element={<Feedback />} path='feedback' />
+          <Route element={<Pro_entry />} path='pro_entry' />
+          <Route element={<Pro_list />} path='pro_list' />
+          <Route element={<All_Details />} path='all_details' />
+          <Route element={<Update_Pro />} path='update_pro/:id' />
+          <Route element={<Profile_check />} path='profile_check/:id' />
+        </Routes>
+      </UserProvider>
     </BrowserRouter>
   );
 }
