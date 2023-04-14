@@ -10,7 +10,6 @@ import Pro_entry from './components/main/Pro_entry';
 import Pro_list from './components/main/Pro_list';
 import All_Details from './components/main/All_Details';
 import Update_Pro from './components/main/Update_Pro';
-import ShowUpdated from './components/main/ShowUpdated';
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
       <Route element={<Pro_list />} path='pro_list' />
       <Route element={<All_Details />} path='all_details' />
       <Route element={<Update_Pro />} path='update_pro/:id' />
-      <Route element={<ShowUpdated />} path='showupdated' />
     </Routes>
     </BrowserRouter>
   );

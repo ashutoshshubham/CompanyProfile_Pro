@@ -73,6 +73,7 @@ const All_Details = () => {
 
 
     return (
+
         <div className='container'>
 
             <h2 className="text-center mx-3">ALL PROFILES HERE</h2>
@@ -114,10 +115,19 @@ const All_Details = () => {
 
                     {/* {profiles.user} */}
 
+                    {/* <Link to={'/update_pro/' + profiles._id}><Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='success' >Update Profile</Button></Link> */}
+
                     <Link to={'/update_pro/' + profiles._id}><Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='success' >Update Profile</Button></Link>
+
+
                 </Accordion>
 
             ))}
+
+
+{/* Feedbacks */}
+
+
 
             <Accordion>
                 <AccordionSummary
