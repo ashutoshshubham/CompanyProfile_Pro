@@ -1,41 +1,50 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { useUserContext } from '../../context/UserProvider'
+import { useUserContext } from '../../context/UserProvider';
+
 
 const Navbar = () => {
 
-    // const { loggedIn, setLoggedIn, logout } = useUserContext();
+    const { loggedIn, setLoggedIn, logout } = useUserContext();
 
-    // const showLoggedIn = () => {
-    //     if (!loggedIn) {
-    //         return (
-    //             <>
-    //                 <li className="nav-item">
-    //                     <NavLink className="nav-link" aria-current="page" to="/signin">
-    //                         Login
-    //                     </NavLink>
-    //                 </li>
-    //                 <li className="nav-item">
-    //                     <NavLink className="nav-link" aria-current="page" to="/signup">
-    //                         SignUp
-    //                     </NavLink>
-    //                 </li>
-    //             </>
-    //         );
-    //     }
-    // }
+    const showLoggedIn = () => {
+        if (!loggedIn) {
+            return (
+                <>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" aria-current="page" to="/signin">
 
-    // const showLogout = () => {
-    //     if (loggedIn) {
-    //         return (
-    //             <li className="nav-item">
-    //                 <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
-    //                     Logout
-    //                 </button>
-    //             </li>
-    //         );
-    //     }
-    // }
+                            <button type="button" className="btn btn-primary me-3 mb-2">
+                                Login
+                            </button>
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" aria-current="page" to="/signup">
+                            <button type="button" className="btn btn-primary me-3 mb-2">
+                                SignUp
+                            </button>
+                        </NavLink>
+                    </li>
+                </>
+            );
+        }
+    }
+
+    const showLogout = () => {
+        if (loggedIn) {
+            return (
+                <li className="nav-item">
+                    {/* <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
+                        Logout
+                    </button> */}
+                    <button type="button" className="btn btn-primary me-3 mb-2" onClick={logout}>
+                        LogOut
+                    </button>
+                </li>
+            );
+        }
+    }
 
 
     return (
@@ -121,8 +130,8 @@ const Navbar = () => {
                                 </li>
                             </ul> */}
 
-                            {/* {showLoggedIn()}
-                            {showLogout()} */}
+                            {showLoggedIn()}
+                            {showLogout()}
 
                             {/* <button type="button" className="btn btn-primary px-3 me-2">
                                 Login
