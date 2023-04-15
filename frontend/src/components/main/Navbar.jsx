@@ -10,23 +10,26 @@ const Navbar = () => {
     const showLoggedIn = () => {
         if (!loggedIn) {
             return (
+                // <ul className="navbar-nav">
                 <>
-                    <li className="nav-item">
+                    {/* <li className="nav-item"> */}
                         <NavLink className="nav-link" aria-current="page" to="/signin">
 
-                            <button type="button" className="btn btn-primary me-3 mb-2">
+                            <button type="button" className="btn btn-primary me-3 mb-1">
                                 Login
                             </button>
                         </NavLink>
-                    </li>
-                    <li className="nav-item">
+                    {/* </li> */}
+                    {/* <li className="nav-item"> */}
                         <NavLink className="nav-link" aria-current="page" to="/signup">
-                            <button type="button" className="btn btn-primary me-3 mb-2">
+                            <button type="button" className="btn btn-primary me-3 mb-1">
                                 SignUp
                             </button>
                         </NavLink>
-                    </li>
+                    {/* </li> */}
                 </>
+                // </ul >
+
             );
         }
     }
@@ -34,14 +37,16 @@ const Navbar = () => {
     const showLogout = () => {
         if (loggedIn) {
             return (
-                <li className="nav-item">
-                    {/* <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
+                // <ul className="navbar-nav">
+                    <li className="nav-item">
+                        {/* <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
                         Logout
                     </button> */}
-                    <button type="button" className="btn btn-primary me-3 mb-2" onClick={logout}>
-                        LogOut
-                    </button>
-                </li>
+                        <button type="button" className="btn btn-primary me-3 mb-2" onClick={logout}>
+                            LogOut
+                        </button>
+                    </li>
+                // </ul>
             );
         }
     }
