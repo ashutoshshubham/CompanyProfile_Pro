@@ -16,10 +16,12 @@ import UserAuth from './auth/UserAuth'
 import AdminProvider from './context/AdminProvider'
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const [currentAdmin, setCurrentAdmin] = useState(JSON.parse(sessionStorage.getItem('admin')));
   return (
     <BrowserRouter>
       {/* <AdminProvider> */}
-        <UserProvider>
+        <UserProvider currentUser={currentUser}>
           <Navbar />
           <Routes>
             <Route path='/' element={<Navigate to='/homepage' />} />
