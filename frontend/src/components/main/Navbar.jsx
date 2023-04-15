@@ -1,7 +1,43 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { useUserContext } from '../../context/UserProvider'
 
 const Navbar = () => {
+
+    // const { loggedIn, setLoggedIn, logout } = useUserContext();
+
+    // const showLoggedIn = () => {
+    //     if (!loggedIn) {
+    //         return (
+    //             <>
+    //                 <li className="nav-item">
+    //                     <NavLink className="nav-link" aria-current="page" to="/signin">
+    //                         Login
+    //                     </NavLink>
+    //                 </li>
+    //                 <li className="nav-item">
+    //                     <NavLink className="nav-link" aria-current="page" to="/signup">
+    //                         SignUp
+    //                     </NavLink>
+    //                 </li>
+    //             </>
+    //         );
+    //     }
+    // }
+
+    // const showLogout = () => {
+    //     if (loggedIn) {
+    //         return (
+    //             <li className="nav-item">
+    //                 <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
+    //                     Logout
+    //                 </button>
+    //             </li>
+    //         );
+    //     }
+    // }
+
+
     return (
         <div>
 
@@ -61,11 +97,13 @@ const Navbar = () => {
                                     </Link>
                                 </li> */}
                             </ul>
+
                             {/* Left links */}
+
                             {/* <div className="d-flex align-items-center"> */}
 
 
-                            <ul className="navbar-nav mb-2 mb-lg-0">
+                            {/* <ul className="navbar-nav mb-2 mb-lg-0">
 
                                 <li className="nav-item">
                                     <Link to='signin'>
@@ -81,8 +119,10 @@ const Navbar = () => {
                                         </button>
                                     </Link>
                                 </li>
-                            </ul>
+                            </ul> */}
 
+                            {/* {showLoggedIn()}
+                            {showLogout()} */}
 
                             {/* <button type="button" className="btn btn-primary px-3 me-2">
                                 Login
