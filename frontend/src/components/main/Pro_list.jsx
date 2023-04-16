@@ -94,88 +94,59 @@ const Pro_list = () => {
       <button className='btn btn-secondary mx-2 mt-3' onClick={fetchProfiles}>
         View All
       </button>
-      
+
       {/* <h1 className='text-center mt-3'>ALL PROFILES HERE</h1> */}
 
-      {profile.map((profiles) => (
 
-        <div className="card mt-3">
-          <div className="card-body">
-            <h5 className="card-title"><b>Company Name - </b>{profiles.name}</h5>
-            <div>
-              <p>
-                <b>Company Type - </b>{profiles.type}
-              </p>
-            </div>
-            <div>
-              <p>
-                <b>Departments - </b>{profiles.departments}
-              </p>
-            </div>
-            <div>
-              <p>
-                <b>Description - </b>{profiles.working}
-              </p>
-            </div>
-            <div>
-              <p>
-                <b>Email - </b>{profiles.email}
-              </p>
-            </div>
-            <div>
-              <p>
-                <b>Contact - </b>{profiles.contact}
-              </p>
-            </div>
-            <div>
-              <p>
-                <b>Address - </b>{profiles.address}
-              </p>
-            </div>
+      <div className="row">
+        {profile.map((profiles) => (
+
+          <div className="col-md-6">
+            <div className="card mt-3 border border-success">
+              <div className="card-body">
+                <h5 className="card-title"><b>Company Name - </b>{profiles.name}</h5>
+                <div>
+                  <p>
+                    <b>Company Type - </b>{profiles.type}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <b>Departments - </b>{profiles.departments}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <b>Description - </b>{profiles.working}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <b>Email - </b>{profiles.email}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <b>Contact - </b>{profiles.contact}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <b>Address - </b>{profiles.address}
+                  </p>
+                </div>
 
 
-            {/* <button type="button" className="btn btn-danger" onClick={() => (deleteProfile(profiles._id))}>
+                {/* <button type="button" className="btn btn-danger" onClick={() => (deleteProfile(profiles._id))}>
               Delete Profile
             </button> */}
+              </div>
+            </div>
           </div>
-        </div>
-        // <Accordion sx={{marginTop:'20px', marginBottom:'20px'}}>
-        //   <AccordionSummary
-        //     expandIcon={<ExpandMoreIcon />}
-        //     aria-controls="panel1a-content"
-        //     id="panel1a-header"
-        //   >
-        //     <Typography>
-        //       <h2>Company Name - {profiles.name}</h2>
-        //     </Typography>
-        //   </AccordionSummary>
-        //   <AccordionDetails>
-        //     <Typography>
-        //       <h4>Company Type - {profiles.type}</h4>
-        //     </Typography>
-        //     <Typography>
-        //       Departments - {profiles.departments}
-        //     </Typography>
-        //     <Typography>
-        //       Description - {profiles.working}
-        //     </Typography>
-        //     <Typography>
-        //       Email - {profiles.email}
-        //     </Typography>
-        //     <Typography>
-        //       Contact - {profiles.contact}
-        //     </Typography>
-        //     <Typography>
-        //       Address - {profiles.address}
-        //     </Typography>
-        //   </AccordionDetails>
-
-        //   <Button variant="contained" sx={{marginLeft:'15px', marginBottom:'15px'}} color='error' onClick={() => (deleteProfile(profiles._id))}>Delete Profile</Button>
-        // </Accordion>
 
 
-
-      ))}
+        ))}
+      </div>
       {/* {imageData.map((img) => (
         <div className="card">
           <div className="card-body">
@@ -195,9 +166,9 @@ const Pro_list = () => {
 
 
 
-      <div className='my-5'>
+      {/* <div className='my-5'>
         <Link to='/homepage' className='mt-3'><b>Back</b></Link>
-      </div>
+      </div> */}
 
     </div>
   )

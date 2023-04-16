@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
 import Navbar from './components/main/Navbar';
 import Home from './components/main/Home';
@@ -29,11 +30,11 @@ function App() {
             <Route element={<SignIn />} path='signin' />
             <Route element={<SignUp />} path='signup' />
             <Route element={<ForgetPswd />} path='forgetpswd' />
+            <Route element={<Pro_list />} path='pro_list' />
             <Route element={<UserAuth><Feedback /></UserAuth>} path='feedback' />
+            <Route element={<UserAuth><All_Details /></UserAuth>} path='all_details' />
             <Route element={<UserAuth><Pro_entry /></UserAuth>} path='pro_entry' />
             {/* <Route element={<Pro_entry />} path='pro_entry' /> */}
-            <Route element={<UserAuth><Pro_list /></UserAuth>} path='pro_list' />
-            <Route element={<UserAuth><All_Details /></UserAuth>} path='all_details' />
             <Route element={<UserAuth><Update_Pro /></UserAuth>} path='update_pro/:id' />
             {/* <Route element={<Profile_check />} path='profile_check/:id' /> */}
           </Routes>

@@ -81,29 +81,29 @@ const Navbar = () => {
                             {/* Left links */}
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/homepage">
+                                    <NavLink className="nav-link" to="/homepage">
                                         Home
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/pro_entry">
+                                    <NavLink className="nav-link" to="/pro_entry">
                                         Profile Entry
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/pro_list">
+                                    <NavLink className="nav-link" to="/pro_list">
                                         Profile List
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/feedback">
+                                    <NavLink className="nav-link" to="/feedback">
                                         Feedback
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/all_details">
+                                    <NavLink className="nav-link" to="/all_details">
                                         All Details
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 {/* <li className="nav-item">
                                     <Link className="nav-link" to="/profile_check">
