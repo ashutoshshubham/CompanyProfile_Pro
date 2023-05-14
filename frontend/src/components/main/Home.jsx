@@ -75,41 +75,43 @@ const Home = () => {
           {/* Section: Social media */}
           {/* Section: Links  */}
           <section className="">
-            <div className="container text-center text-md-start mt-5">
+            <div className="container text-center text-md-start mt-4">
               {/* Grid row */}
-              <div className="mt-3">
-                {/* Grid column */}
+              {/* <div className="mt-3"> */}
+              {/* Grid column */}
 
-                {/* Grid column */}
-                {/* Grid column */}
+              {/* Grid column */}
+              {/* Grid column */}
 
-                {/* Grid column */}
-                {/* Grid column */}
+              {/* Grid column */}
+              {/* Grid column */}
 
-                {/* Grid column */}
-                {/* Grid column */}
-                <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                  {/* Links */}
-                  <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-                  <p>
-                    <i className="fas fa-home me-3 text-secondary" /> New York, NY
-                    10012, US
-                  </p>
-                  <p>
-                    <i className="fas fa-envelope me-3 text-secondary" />
-                    info@example.com
-                  </p>
-                  <p>
-                    <i className="fas fa-phone me-3 text-secondary" /> + 01 234 567 88
-                  </p>
-                  <p>
-                    <i className="fas fa-print me-3 text-secondary" /> + 01 234 567 89
-                  </p>
-                </div>
-                {/* Grid column */}
+              {/* Grid column */}
+              {/* Grid column */}
+              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto  mb-md-0 mb-4">
+                {/* Links */}
+                <h6 className="text-uppercase fw-bold mb-4 text-dark">Contact</h6>
+
+                <p>
+                  <i className="fas fa-home me-3" /> New York, NY
+                  10012, US
+                </p>
+                <p>
+                  <i className="fas fa-envelope me-3" />
+                  info@companyprofile.com
+                </p>
+                <p>
+                  <i className="fas fa-phone me-3" /> + 01 234 567 88
+                </p>
+                <p>
+                  <i className="fas fa-print me-3" /> + 01 234 567 89
+                </p>
+
               </div>
-              {/* Grid row */}
+              {/* Grid column */}
             </div>
+            {/* Grid row */}
+            {/* </div> */}
           </section>
           {/* Section: Links  */}
           {/* Copyright */}

@@ -6,7 +6,7 @@ import { useUserContext } from '../../context/UserProvider'
 
 const SignIn = () => {
 
-    const {loggedIn, setLoggedIn} = useUserContext();
+    const { loggedIn, setLoggedIn } = useUserContext();
 
     const navigate = useNavigate();
 
@@ -103,9 +103,12 @@ const SignIn = () => {
                                 <button type="submit" className="btn btn-success w-100 my-2">
                                     {isSubmitting ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> : "Submit"}
                                 </button>
+
                             </form>
                         )}
                     </Formik>
+
+                    <p className='text-center'>Don't have account? <Link to='/main/signup'>SignUp</Link></p>
 
                 </div>
 
