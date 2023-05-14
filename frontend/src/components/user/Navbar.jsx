@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom';
 import { useUserContext } from '../../context/UserProvider';
 
-
 const Navbar = () => {
+
 
     const { loggedIn, setLoggedIn, logout } = useUserContext();
 
@@ -13,19 +13,19 @@ const Navbar = () => {
                 // <ul className="navbar-nav">
                 <>
                     {/* <li className="nav-item"> */}
-                        <NavLink className="nav-link" aria-current="page" to="/main/signin">
+                    <NavLink className="nav-link" aria-current="page" to="/main/signin">
 
-                            <button type="button" className="btn btn-primary me-3 mb-1">
-                                Login
-                            </button>
-                        </NavLink>
+                        <button type="button" className="btn btn-primary me-3 mb-1">
+                            Login
+                        </button>
+                    </NavLink>
                     {/* </li> */}
                     {/* <li className="nav-item"> */}
-                        <NavLink className="nav-link" aria-current="page" to="/main/signup">
-                            <button type="button" className="btn btn-primary me-3 mb-1">
-                                SignUp
-                            </button>
-                        </NavLink>
+                    <NavLink className="nav-link" aria-current="page" to="/main/signup">
+                        <button type="button" className="btn btn-primary me-3 mb-1">
+                            SignUp
+                        </button>
+                    </NavLink>
                     {/* </li> */}
                 </>
                 // </ul >
@@ -39,12 +39,12 @@ const Navbar = () => {
             return (
                 <ul className="navbar-nav">
                     {/* // <li className="nav-item"> */}
-                        {/* <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
+                    {/* <button className="btn btn-danger ms-3" aria-current="page" onClick={logout}>
                         Logout
                     </button> */}
-                        <button type="button" className="btn btn-primary me-3 mb-2" onClick={logout}>
-                            LogOut
-                        </button>
+                    <button type="button" className="btn btn-primary me-3 mb-2" onClick={logout}>
+                        LogOut
+                    </button>
                     {/* // </li> */}
                 </ul>
             );
@@ -58,7 +58,7 @@ const Navbar = () => {
 
             <>
                 {/* Navbar */}
-                <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:'purple'}}>
+                <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:'brown'}}>
                     {/* Container wrapper */}
                     <div className="container">
                         {/* Navbar brand */}
@@ -81,34 +81,34 @@ const Navbar = () => {
                         <div className="collapse navbar-collapse" id="navbarButtonsExample">
                             {/* Left links */}
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item">
-                                    <NavLink className="nav-link text-white" to="/main/homepage">
+                                {/* <li className="nav-item">
+                                    <NavLink className="nav-link" to="/main/homepage">
                                         Home
                                     </NavLink>
-                                </li>
+                                </li> */}
                                 {/* <li className="nav-item">
                                     <NavLink className="nav-link" to="/main/pro_entry">
                                         Profile Entry
                                     </NavLink>
                                 </li> */}
-                                <li className="nav-item">
-                                    <NavLink className="nav-link text-white" to="/main/pro_list">
+                                {/* <li className="nav-item">
+                                    <NavLink className="nav-link text-white" to="/user/pro_list">
                                         Profile List
+                                    </NavLink>
+                                </li> */}
+                                <li className="nav-item">
+                                    <NavLink className="nav-link text-white" to="/user/feedback">
+                                        Feedback
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link text-white" to="/user/all_details">
+                                        All Details
                                     </NavLink>
                                 </li>
                                 {/* <li className="nav-item">
-                                    <NavLink className="nav-link" to="/main/feedback">
-                                        Feedback
-                                    </NavLink>
-                                </li> */}
-                                {/* <li className="nav-item">
-                                    <NavLink className="nav-link" to="/all_details">
-                                        All Details
-                                    </NavLink>
-                                </li> */}
-                                {/* <li className="nav-item">
-                                    <Link className="nav-link" to="/profile_check">
-                                       Profile Check
+                                    <Link className="nav-link" to="/user/update_pro/:id">
+                                       Update Profile
                                     </Link>
                                 </li> */}
                             </ul>
@@ -156,6 +156,8 @@ const Navbar = () => {
             </>
 
         </div>
+
+
     )
 }
 

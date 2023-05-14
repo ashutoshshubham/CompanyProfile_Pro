@@ -115,7 +115,7 @@ const All_Details = () => {
 
                     {/* {profiles.user} */}
 
-                    <Link to={'/update_pro/' + profiles._id}><Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='success' >Update Profile</Button></Link>
+                    <Link to={'/user/update_pro/' + profiles._id}><Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='success' >Update Profile</Button></Link>
 
                     {/* <Link to={'/profile_check/' + profiles._id}><Button variant="contained" sx={{ marginLeft: '15px', marginBottom: '15px' }} color='success' >Update Profile</Button></Link> */}
 

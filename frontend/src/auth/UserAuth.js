@@ -16,7 +16,7 @@ const UserAuth = ({children}) => {
             text: 'Please Login First!!',
         })
         // return <Navigate to="/main/login" />
-        return <Navigate to="/signin" />
+        return <Navigate to="/main/signin" />
     }
 }
 

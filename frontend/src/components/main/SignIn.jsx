@@ -2,8 +2,12 @@ import React from 'react'
 import { Formik } from "formik"
 import { Link, useNavigate } from 'react-router-dom'
 import Swal from "sweetalert2"
+import { useUserContext } from '../../context/UserProvider'
 
 const SignIn = () => {
+
+    const {loggedIn, setLoggedIn} = useUserContext();
+
     const navigate = useNavigate();
 
     const loginSubmit = async (formdata, { resetForm, setSubmitting }) => {
@@ -27,10 +31,10 @@ const SignIn = () => {
                 text: 'Login Successful'
             })
             const data = (await res.json());
+            setLoggedIn(true);
             console.log(data);
             sessionStorage.setItem('user', JSON.stringify(data));
-
-            navigate('/pro_entry');
+            navigate('/user/pro_entry');
         }
         else if (res.status === 401) {
             Swal.fire({
