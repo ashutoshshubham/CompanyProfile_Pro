@@ -26,6 +26,7 @@ function App() {
       {/* <AdminProvider> */}
       <UserProvider currentUser={currentUser}>
         <Routes>
+          
           <Route path='/' element={<Navigate to='/main/homepage' />} />
           <Route element={<Main />} path='main'>
             <Route element={<Home />} path='homepage' />
@@ -34,7 +35,7 @@ function App() {
             <Route element={<ForgetPswd />} path='forgetpswd' />
             <Route element={<Pro_list />} path='pro_list' />
           </Route>
-          
+
           <Route element={<User />} path='user'>
             <Route element={<Feedback />} path='feedback' />
             <Route element={<All_Details />} path='all_details' />
