@@ -36,7 +36,7 @@ function App() {
             <Route element={<Pro_list />} path='pro_list' />
           </Route>
 
-          <Route element={<User />} path='user'>
+          <Route element={<UserAuth><User /></UserAuth>} path='user'>
             <Route element={<Feedback />} path='feedback' />
             <Route element={<All_Details />} path='all_details' />
             <Route element={<Pro_entry />} path='pro_entry' />

@@ -93,8 +93,8 @@ const Home = () => {
                 <h6 className="text-uppercase fw-bold mb-4 text-dark">Contact</h6>
 
                 <p>
-                  <i className="fas fa-home me-3" /> New York, NY
-                  10012, US
+                  <i className="fas fa-home me-3" /> Lucknow, UP
+                  226028, India
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3" />

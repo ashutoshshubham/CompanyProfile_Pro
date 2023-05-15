@@ -39,6 +39,30 @@ const All_Details = () => {
 
     const deleteProfile = async (id) => {
         console.log(id);
+        // Swal.fire({
+        //     title: 'Are you sure?',
+        //     text: "You won't be able to revert this!",
+        //     icon: 'warning',
+        //     showCancelButton: true,
+        //     confirmButtonColor: '#3085d6',
+        //     cancelButtonColor: '#d33',
+        //     confirmButtonText: 'Yes, delete it!'
+        // }).then((result) => {
+        //     if (result.isConfirmed) {
+        //         const res = fetch('http://localhost:5000/company/delete/' + id, {
+        //             method: "DELETE",
+        //         })
+        //         console.log(res.status);
+        //         if (res.status === 200) {
+        //             fetchProfiles();
+        //             Swal.fire({
+        //                 icon: 'success',
+        //                 title: 'Success',
+        //                 text: 'Profile Deleted Successfully'
+        //             })
+        //         }
+        //     }
+        // })
         const res = await fetch('http://localhost:5000/company/delete/' + id, {
             method: "DELETE",
         })
@@ -125,7 +149,7 @@ const All_Details = () => {
             ))}
 
 
-{/* Feedbacks */}
+            {/* Feedbacks */}
 
 
 
